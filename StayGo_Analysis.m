@@ -26,9 +26,9 @@ load Survey_Data.mat
 % Find average earnings for each participant
 
 earnings= [];
-
+folder = 'StayGo_Participants\';
 for ii = 1:N
-    filename = ['Participant_Matrix_' sprintf('%01d',ii) '.csv'];
+    filename = [folder 'Participant_Matrix_' sprintf('%01d',ii) '.csv'];
     
     Participant = csvread(filename,1,0);
     participant_earnings =(Participant(:,4));
